@@ -1,12 +1,12 @@
 body, html {
 
-  background-image: url("https://raw.githubusercontent.com/marcino8/DentistApp/master/Git/DentistApp/img/background-final.png");
+  background-image: url("https://raw.githubusercontent.com/marcino8/DentalApp/master/img/background-final.png");
   background-repeat: repeat;
   overflow-x: hidden;
 }
 
 h1 {
-  font-size: 8vw !important;
+  font-size: 10vh !important;
 }
 
 .main-page {
@@ -20,6 +20,10 @@ h1 {
   border: black solid 5px;
   padding: 50px;
   margin: 50px 25px 50px 25px !important;
+}
+
+.p-fieldset-content {
+  text-align: center !important;
 }
 
 .second-row {
@@ -66,7 +70,7 @@ h1 {
 .p-button-lg {
   margin: 10px !important;
   width: 100% !important;
-  color: #a10404 !important;
+  color: #5c0707 !important;
   background: #FFFFFF !important;
 
 }
@@ -100,7 +104,12 @@ h1 {
 }
 
 .section-header {
-  margin: 50px;
+  color: #5c0707 !important;
+  background: white;
+  border-radius: 25px;
+  border: solid #5c0707 4px;
+  margin: 50px auto 0 auto;
+  padding: 12px;
   display: flex;
   justify-content: center;
 }
@@ -218,14 +227,12 @@ a {
   padding: 20px;
   width: 700px;
   margin: auto;
-  border-radius: 10px !important;
 }
 
 .pricing-list-long-wrap {
   background: #FFFFFF;
   width: 800px;
-  margin: auto;
-  border-radius: 25px;
+  margin: 25px auto 25px auto !important;
   border: 2px solid #000000;
 }
 
@@ -244,18 +251,22 @@ a {
 }
 
 .gallery-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #5c0707 !important;
   padding: 25px;
   border-radius: 25px;
   border: 5px solid black;
+  height: 100vh;
 }
 
 .footer{
-  width: 800px !important;
-  background: antiquewhite;
-  border-radius: 25px;
+  background: #5c0707 !important;
+  color: white !important;
   border: 2px solid #000000;
-
+  padding: 25px;
   margin: 50px auto 50px auto;
 }
 
@@ -300,3 +311,4 @@ a {
   align-items: center;
   margin: 10px;
 }
+

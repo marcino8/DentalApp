@@ -43,31 +43,31 @@ export class AppComponent implements OnInit {
 
   initPricingList() {
     this.pricingList.push({
-      image: "http://127.0.0.1:8080/purchase-icon.png",
+      image: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/purchase-icon.png",
       text: "Wypełnienie zęba stałego",
       price: "150-300 zł"
     });
 
     this.pricingList.push({
-      image: "http://127.0.0.1:8080/purchase-icon.png",
+      image: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/purchase-icon.png",
       text: "Cennik opcja 2",
       price: "200 zł"
     });
 
     this.pricingList.push({
-      image: "http://127.0.0.1:8080/purchase-icon.png",
+      image: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/purchase-icon.png",
       text: "Cennik opcja 3",
       price: "200 zł"
     });
 
     this.pricingList.push({
-      image: "http://127.0.0.1:8080/purchase-icon.png",
+      image: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/purchase-icon.png",
       text: "Cennik opcja 4",
       price: "200 zł"
     });
 
     this.pricingList.push({
-      image: "http://127.0.0.1:8080/purchase-icon.png",
+      image: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/purchase-icon.png",
       text: "Cennik opcja 5",
       price: "200 zł"
     });
@@ -80,40 +80,40 @@ export class AppComponent implements OnInit {
 
   private initImmages() {
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag1.jpg",
-      thumbnail: "http://127.0.0.1:8080/img1thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag1.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img1thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag2.jpg",
-      thumbnail: "http://127.0.0.1:8080/img2thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag2.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img2thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag3.jpg",
-      thumbnail: "http://127.0.0.1:8080/img3thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img3thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag5.jpg",
-      thumbnail: "http://127.0.0.1:8080/img5thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img5thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag6.jpg",
-      thumbnail: "http://127.0.0.1:8080/img6thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img6thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag7.jpg",
-      thumbnail: "http://127.0.0.1:8080/img7thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag7.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img7thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag8.jpg",
-      thumbnail: "http://127.0.0.1:8080/img8thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag8.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img8thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag9.jpg",
-      thumbnail: "http://127.0.0.1:8080/img9thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img9thumb.jpg"
     });
     this.images.push({
-      full_size: "http://127.0.0.1:8080/imag10.jpg",
-      thumbnail: "http://127.0.0.1:8080/img10thumb.jpg"
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
     });
   }
 
