@@ -31,6 +31,10 @@ h1 {
   flex-direction: column;
 }
 
+.team-section p-image{
+  border-radius: 50% !important;
+}
+
 .first-row {
   background: #FFFFFF;
   border-radius: 25px;
@@ -156,6 +160,10 @@ a {
   width: 200%;
   height: 200%;
 }
+
+.break {
+  height: 50px;
+}
 #bg img {
   position: absolute;
   top: 0;
@@ -166,6 +174,10 @@ a {
   min-width: 50%;
   min-height: 50%;
   z-index: -1;
+}
+
+.p-image-preview-indicator {
+  border-radius: 50% !important;
 }
 
 .collapsible {
