@@ -1,8 +1,19 @@
 <div class="main-page">
+  <div class="row">
+    <div class="col-xl-2 col-lg-2 col-md-1 d-none d-md-block">
 
-  <div class="logo-container">
-    <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/mainpage_final.jpg" alt="Image" width="101%"></p-image>
+    </div>
+    <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
+      <div class="logo-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/mainpage_final.jpg" alt="Image" width="100%"></p-image>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-1 d-none d-md-block">
+
+    </div>
+
   </div>
+
 
   <div class="row buttons-row">
     <div class="col-xl-2 col-lg-2 d-none d-lg-block button-container"></div>
@@ -41,99 +52,74 @@
 
 
   <div class="section-header">
-    <h1 #services>Usługi</h1>
+    <h2 #services>Usługi</h2>
   </div>
 
   <div class="services-accordition">
 
     <div class="row first-row">
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/estetyczna.jpg" alt="Image" width="100%"></p-image>
-      </div>
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
-        <p-fieldset legend="Stomatologia estetyczna" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-estetyka.png" alt="Image" height="50px"></p-image>
-            </div>
-          </ng-template>
-          <p>Precyzyjne, bezbolesne zabiegi mogą sprawić, że Twój ząb zmieni dotychczasowy kształt,
-            odzyska utracony po leczeniu endodontycznym kolor. Możemy sprawić, że diastemy (przerwy)
-            między zębami znikną a Twój piękny, olśniewająco biały uśmiech sprawi Ci radość i będzie
-            powodem do zazdrości.</p>
-        </p-fieldset>
-      </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+          <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/estetyczna.jpg" alt="Image" width="100%"></p-image>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
+          <p-fieldset legend="Stomatologia estetyczna" [toggleable]="true" class="collapsible" [collapsed]="true">
+            <p>Precyzyjne, bezbolesne zabiegi mogą sprawić, że Twój ząb zmieni dotychczasowy kształt,
+              odzyska utracony po leczeniu endodontycznym kolor. Możemy sprawić, że diastemy (przerwy)
+              między zębami znikną a Twój piękny, olśniewająco biały uśmiech sprawi Ci radość i będzie
+              powodem do zazdrości.</p>
+          </p-fieldset>
+        </div>
     </div>
 
     <div class="row second-row">
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Stomatologia zachowawcza" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-zach.png" alt="Image"  height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>W naszych gabinetach wiemy jak ważne jest zdrowie zębów, dlatego podczas wizyt zawsze staramy się edukować
             w szczególności dzieci jak wygląda higiena jamy ustnej. Dorosłym pacjentom dbającym o szczegóły możemy zagwarantować,
             że różnorodność barw materiałów do wypełnień idealnie  dopasuje się do naturalnego koloru zęba.</p>
         </p-fieldset>
       </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/zachowawcza.jpg" alt="Image" width="100%"></p-image>
       </div>
     </div>
 
     <div class="row first-row">
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/endodoncja.png" alt="Image" width="100%"></p-image>
       </div>
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Endodoncja" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-endo.png" alt="Image" height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>Leczenie kanałowe zęba wykonuje się w przypadku nieodwracalnych zmian w miazdze (nerwie) zęba.
             Skuteczność leczenia kanałowego jest wysoka pod warunkiem przestrzegania odpowiedniej dokładności oraz
             wykorzystywania specjalistycznych i niezwykle precyzyjnych procedur. Leczenie kanałowe często jest nazywane
             ostatnią deską ratunku - jednak jest to zabieg, po którym trzeba niezwykle przestrzegać higieny jamy ustnej
-            i profilaktycznie się badać. Jeśli będzie działo się coś złego - to ze względu na brak nerwu, nie odczujemy
+            i profilaktycznie się badać. Jeśli będzie działo się coś złego - to ze względu na brak miazgi, nie odczujemy
             groźnych i bolesnych symptomów.</p>
         </p-fieldset>
       </div>
     </div>
 
     <div class="row second-row">
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Stomatologia dziecięca" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-dziecieca.png" alt="Image" height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>Twoje dziecko jest nazywane "trudnym pacjentem"?
             Kojarzysz z własnego dzieciństwa wizyty u stomatologa jako traumatyczne przeżycia?
             Odwiedź nas ze swoją pociechą. Na naszych twarzach zawsze zobaczysz uśmiech,
             doświadczysz miłego przyjęcia i zainteresowania. Dla dzieciaków mamy super nagrody.</p>
         </p-fieldset>
       </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/stomatologia-dziecieca.jpg" alt="Image"  width="100%"></p-image>
       </div>
     </div>
 
     <div class="row first-row">
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/orto.jpg" alt="Image" width="100%"></p-image>
       </div>
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Ortodoncja" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-orto.png" alt="Image" height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>Zrotowane zęby, wady zgryzu, czy stłoczenie zębów jest powszechnym
             powodem stosowania aparatu ortodontycznego. Umów się na konsultację ortodontyczną
             i ustal plan leczenia! </p>
@@ -146,13 +132,8 @@
     </div>
 
     <div class="row second-row">
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Chirurgia" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-chirurgia.png" alt="Image"  height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>Zabiegi chirurgiczne są przeważnie związane z defektami znajdującymi
             się w naszej jamie ustnej. Najczęściej wykonywanym zabiegiem jest oczywiście
             ekstrakcja zęba - w rzadszych przypadkach wykonujemy także usuwanie ropni oraz
@@ -160,29 +141,24 @@
             miejscowym przez naszych specjalistów</p>
         </p-fieldset>
       </div>
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/chirurgia.png" alt="Image" width="100%"></p-image>
       </div>
     </div>
 
     <div class="row first-row">
-      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/profilaktyka.jpg" alt="Image" width="100%"></p-image>
       </div>
-      <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12 col-12 collapsible-container">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 collapsible-container">
         <p-fieldset legend="Profilaktyka" [toggleable]="true" class="collapsible" [collapsed]="true">
-          <ng-template pTemplate="header">
-            <div class="collapsible-icon">
-              <p-image  src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-profilaktyka.png" alt="Image" height="50px"></p-image>
-            </div>
-          </ng-template>
           <p>Obecność płytki bakteryjnej szkodzi zarówno zębom, jak i dziąsłom.
             Ta lepka powłoka szybko się mineralizuje i przekształca w kamień nazębny.
             Jego obecność może spowodować rozwój parodontozy doprowadzającej nawet do
             utraty zębów. Aby tego uniknąć należy regularnie, przynajmniej raz w roku
             oczyszczać zęby w gabinecie stomatologicznym. Zabieg ten wykonywany jest
             za pomocą ultradźwięków i piaskarki. Po zabiegu zęby są dokładnie polerowane
-            i zabeczpieczne preparatem fluorowym. Proponujemy również profilaktykę przeciwpróchniczą
+            i zabeczpieczanie preparatem fluorowym. Proponujemy również profilaktykę przeciwpróchniczą
             zębów - lakierowanie oraz lakowanie.
           </p>
         </p-fieldset>
@@ -192,7 +168,7 @@
   </div>
 
   <div class="section-header">
-    <h1 #team>Nasz zespół</h1>
+    <h2 #team>Nasz zespół</h2>
   </div>
   <div class="team-section">
     <div class="team">
@@ -209,16 +185,16 @@
         </p-panel>
       </div>
       <div class="photo-text-wrapper">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/final-mini-3.png" alt="Image" height="300px"></p-image>
-        <p-panel header="Paulina Migdałek" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
-          Higienistka stomatologiczna
-        </p-panel>
-      </div>
-      <div class="photo-text-wrapper">
         <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/final-mini-4.png" alt="Image" height="300px"></p-image>
         <p-panel header="Olga Przybylska-Kozerska" [toggleable]="true" toggler="header" [collapsed]="true"
                  class="text-panel">
           Lekarz dentysta - ortodoncja, leczenie dysfunkcji stawów skroniowo-żuchwowych.
+        </p-panel>
+      </div>
+      <div class="photo-text-wrapper">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/final-mini-3.png" alt="Image" height="300px"></p-image>
+        <p-panel header="Paulina Migdałek" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
+          Higienistka stomatologiczna
         </p-panel>
       </div>
       <div class="photo-text-wrapper">
@@ -232,36 +208,7 @@
   </div>
 
   <div class="section-header">
-    <h1 #pricing>Cennik</h1>
-  </div>
-
-  <div class="pricing-short">
-    <p-carousel [value]="pricingList" [numVisible]="1" [numScroll]="1" [circular]="true">
-      <ng-template pTemplate="header">
-      </ng-template>
-      <ng-template let-product pTemplate="item">
-        <div class="product-item">
-          <div class="product-item-content">
-            <div class="mb-3">
-              <img src="{{product.image}}" [alt]="product.name" class="product-image"/>
-            </div>
-            <div class="name-and-price">
-              <h4 class="mb-1">{{product.text}}</h4>
-              <h6 class="mt-0 mb-3">{{product.price}}</h6>
-            </div>
-          </div>
-        </div>
-      </ng-template>
-    </p-carousel>
-    <div class="button-container">
-      <button pButton type="button" label="Umów się już dziś!" icon="pi pi-info-circle" (click)="scrollToElement(contact)"
-              class="p-button-lg p-button-rounded p-button-danger"></button>
-    </div>
-  </div>
-
-
-  <div class="section-header">
-    <h2 #pricing>Pełny cennik</h2>
+    <h2 #pricing>Cennik</h2>
   </div>
 
   <div class="pricing-table-box">
@@ -290,7 +237,7 @@
   </div>
 
   <div class="section-header">
-    <h1 #gallery>Galeria</h1>
+    <h2 #gallery>Galeria</h2>
   </div>
   <div class="gallery">
     <div class="gallery-wrapper">
@@ -308,24 +255,24 @@
 
 
   <div class="section-header">
-    <h1 #contact>Kontakt</h1>
+    <h2 #contact>Kontakt</h2>
   </div>
 
   <div class="footer">
     <div class="row footer-row">
       <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-12 footer-section">
         <h2>O nas</h2>
-        <p>Gabinet Stomatologiczny</p>
-        <p>Iwona Reguła</p>
-        <p>Indywidualna Praktyka Stomatologiczna</p>
-        <p>Monika Stefańczyk</p>
-        <p>Indywidualna Praktyka Lekarska</p>
-        <p>Olga Przybylska-Kozerska</p>
+        <p>Gabinet Stomatologiczny <br> Iwona Reguła</p>
+        <p></p>
+        <p>Indywidualna Praktyka Stomatologiczna <br>Monika Stefańczyk </p>
+        <p></p>
+        <p>Indywidualna Praktyka Lekarska <br>Olga Przybylska-Kozerska</p>
+        <p></p>
       </div>
       <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-12 footer-section">
         <h2>Skontaktuj się z nami</h2>
-        <p>Stacjonarny: (12) 262 62 10</p>
-        <p class="bold">Komórkowy: 669 807 072</p>
+        <p>Tel. stacjonarny: (12) 262 62 10 <br> Tel. komórkowy: 669 807 072</p>
+
         <p>Email: malarzeusmiechu@gmail.com</p>
         <h2>Godziny otwarcia</h2>
         <p>Poniedziałek - Piątek: 10:00 - 19:00</p>

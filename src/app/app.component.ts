@@ -217,7 +217,7 @@ export class AppComponent implements OnInit {
               data: {service: "Zamknięcie diastemy", price:"350 zł"},
             },
             {
-              data: {service: "Licówka kompozytowa", price:"350-400-250 zł"},
+              data: {service: "Licówka kompozytowa", price:"300-400 zł"},
             },
             {
               data: {service: "Most klejony na włóknach szklanych", price:"400-600 zł"},
@@ -330,13 +330,13 @@ export class AppComponent implements OnInit {
               data: {service: "Proteza akrylowa", price:"800 zł"},
             },
             {
-              data: {service: "Proteza szkieletowa", price:"50 zł"},
-            },
-            {
               data: {service: "Komplet protez", price:"1600 zł"},
             },
             {
               data: {service: "Mikroproteza do 3 punktów", price:"450 zł"},
+            },
+            {
+              data: {service: "Proteza szkieletowa", price:"1600 zł"},
             },
             {
               data: {service: "Zasuwa / zatrzask", price:"500 zł"},
@@ -413,7 +413,7 @@ export class AppComponent implements OnInit {
           data: {service: "Rejestraty do szyny", price:"150 zł"},
         },
         {
-          data: {service: "Szyna z prowadzeniem kołowym, siecznym", price:"500 zł"},
+          data: {service: "Szyna z prowadzeniem kłowym, siecznym", price:"500 zł"},
         },
         {
           data: {service: "Szyna relaskacyjna miękka", price:"350 zł"},
@@ -431,7 +431,7 @@ export class AppComponent implements OnInit {
       data: {service: "Endodoncja", price:""},
       children: [
         {
-          data: {service: "Leczenie endodontyczne maszynowe", price:"150 zł"},
+          data: {service: "Leczenie endodontyczne maszynowe", price:""},
           children: [
             {
               data: {service: "Ząb 1 kanałowy", price:"Razem - 400 zł"},

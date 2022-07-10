@@ -1,9 +1,18 @@
 body, html {
 
-  background-image: url("https://raw.githubusercontent.com/marcino8/DentalApp/master/img/background-final.png");
-  background-repeat: repeat;
+  background-image: url("http://192.168.0.206:8080/svg2.svg");
+  background-repeat: repeat-y;
   overflow-x: hidden;
 }
+
+.first-row p-image {
+  max-width: 500px !important;
+}
+
+.second-row p-image {
+  max-width: 500px !important;
+}
+
 
 h1 {
   font-size: 10vh !important;
