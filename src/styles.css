@@ -5,6 +5,14 @@ body, html {
   overflow-x: hidden;
 }
 
+.logo-container {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
 .first-row p-image {
   max-width: 500px !important;
 }
