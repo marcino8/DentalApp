@@ -88,31 +88,39 @@ export class AppComponent implements OnInit {
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img2thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img3thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img5thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img6thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag7.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img7thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag8.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img8thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag7.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img9thumb.jpg"
     });
     this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg",
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag8.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
+    });
+    this.images.push({
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg",
+      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
+    });
+    this.images.push({
+      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag11.jpg",
       thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
     });
   }

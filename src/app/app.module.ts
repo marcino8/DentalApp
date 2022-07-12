@@ -13,6 +13,7 @@ import {ScrollTopModule} from "primeng/scrolltop";
 import {PanelModule} from "primeng/panel";
 import {TreeTableModule} from "primeng/treetable";
 import {CarouselModule} from "primeng/carousel";
+import {CardModule} from "primeng/card";
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {CarouselModule} from "primeng/carousel";
     PanelModule,
     CarouselModule,
     TreeTableModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
