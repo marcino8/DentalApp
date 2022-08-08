@@ -6,21 +6,41 @@
     <div class="col-xl-2 col-lg-2 col-md-1 d-none d-md-block"></div>
     <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12">
       <div class="logo-container">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/logo1.png" alt="Image" width="200px"></p-image>
         <div class="text">
-          <h1> Malarze uśmiechu</h1>
+          <h3> Malarze uśmiechu</h3>
+          <p>Gabinet stomatologiczny Iwona Reguła</p>
+        </div>
+        <div class="logo">
+          <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/logo1.png" alt="Image"
+                   width="100px"></p-image>
+          <p>669 807 072 <i class="pi pi-phone"></i></p>
+          <p>Kraków ul. Profesora Władysława Konopczyńskiego 16/LU2 <i class="pi pi-compass"></i> </p>
         </div>
       </div>
     </div>
     <div class="col-xl-2 col-lg-2 col-md-1 d-none d-md-block"></div>
   </div>
 
+  <p-carousel [value]="banner_photos" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions"
+  [autoplayInterval]="4000">
+    <ng-template pTemplate="header">
+    </ng-template>
+    <ng-template let-photo pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="mb-3">
+            <img src="{{photo.photo_url}}" [alt]="'img'" class="product-image" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+
   <div class="row">
     <div class="col break"></div>
   </div>
 
-
-  <div class="row buttons-row"  #menu>
+  <div class="row buttons-row" #menu>
     <div class="col-xl-2 col-lg-2 d-none d-lg-block button-container"></div>
 
     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-6 button-container">
@@ -39,7 +59,7 @@
     </div>
 
     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col-6 button-container">
-      <button pButton type="button" label="Kontakt" icon="pi pi-phone" (click)="display = true"
+      <button pButton type="button" label="Kontakt" icon="pi pi-phone" (click)="openContact()"
               class="p-button-lg p-button-danger"></button>
     </div>
 
@@ -79,19 +99,6 @@
     <div class="col break"></div>
   </div>
 
-  <div class="row first-row">
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-      <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg" alt="Image" width="100%"></p-image>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-      <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg" alt="Image" width="100%"></p-image>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-      <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg" alt="Image" width="100%"></p-image>
-    </div>
-  </div>
-
-
   <div class="section-header">
     <h2 #services>Usługi</h2>
   </div>
@@ -100,123 +107,120 @@
 
     <div class="row first-row">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-endo.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-endo.png"
+                 class="header-icon">
             <h3>Endodoncja</h3>
           </ng-template>
-          <p>Leczenie kanałowe zęba wykonuje się w przypadku nieodwracalnych zmian w miazdze (nerwie) zęba.
-            Skuteczność leczenia kanałowego jest wysoka pod warunkiem przestrzegania odpowiedniej dokładności oraz
-            wykorzystywania specjalistycznych i niezwykle precyzyjnych procedur. Leczenie kanałowe często jest nazywane
-            ostatnią deską ratunku - jednak jest to zabieg, po którym trzeba niezwykle przestrzegać higieny jamy ustnej
-            i profilaktycznie się badać. Jeśli będzie działo się coś złego - to ze względu na brak miazgi, nie odczujemy
-            groźnych i bolesnych symptomów.</p>
-        </p-card>      </div>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>Leczenie kanałowe zęba wykonuje się w przypadku nieodwracalnych zmian w miazdze (nerwie) zęba.
+              Skuteczność leczenia kanałowego jest wysoka pod warunkiem przestrzegania odpowiedniej dokładności oraz
+              wykorzystywania specjalistycznych i niezwykle precyzyjnych procedur. Leczenie kanałowe często jest nazywane
+              ostatnią deską ratunku - jednak jest to zabieg, po którym trzeba niezwykle przestrzegać higieny jamy ustnej
+              i profilaktycznie się badać. Jeśli będzie działo się coś złego - to ze względu na brak miazgi, nie odczujemy
+              groźnych i bolesnych symptomów.</p>
+          </p-scrollPanel>
+        </p-card>
+      </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
         <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-profilaktyka.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-profilaktyka.png"
+                 class="header-icon">
             <h3>Profilaktyka</h3>
           </ng-template>
-          <p>Obecność płytki bakteryjnej szkodzi zarówno zębom, jak i dziąsłom.
-            Ta lepka powłoka szybko się mineralizuje i przekształca w kamień nazębny.
-            Jego obecność może spowodować rozwój parodontozy doprowadzającej nawet do
-            utraty zębów. Aby tego uniknąć należy regularnie, przynajmniej raz w roku
-            oczyszczać zęby w gabinecie stomatologicznym. Zabieg ten wykonywany jest
-            za pomocą ultradźwięków i piaskarki. Po zabiegu zęby są dokładnie polerowane
-            i zabeczpieczanie preparatem fluorowym. Proponujemy również profilaktykę przeciwpróchniczą
-            zębów - lakierowanie oraz lakowanie.
-          </p>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>Obecność płytki bakteryjnej szkodzi zarówno zębom, jak i dziąsłom.
+              Ta lepka powłoka szybko się mineralizuje i przekształca w kamień nazębny.
+              Jego obecność może spowodować rozwój parodontozy doprowadzającej nawet do
+              utraty zębów. Aby tego uniknąć należy regularnie, przynajmniej raz w roku
+              oczyszczać zęby w gabinecie stomatologicznym. Zabieg ten wykonywany jest
+              za pomocą ultradźwięków i piaskarki. Po zabiegu zęby są dokładnie polerowane
+              i zabeczpieczanie preparatem fluorowym. Proponujemy również profilaktykę przeciwpróchniczą
+              zębów - lakierowanie oraz lakowanie.
+            </p>
+          </p-scrollPanel>
         </p-card>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-orto.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-orto.png"
+                 class="header-icon">
             <h3>Ortodoncja</h3>
           </ng-template>
-          <p>Zrotowane zęby, wady zgryzu, czy stłoczenie zębów jest powszechnym
-            powodem stosowania aparatu ortodontycznego. Umów się na konsultację ortodontyczną
-            i ustal plan leczenia! </p>
-          <p>
-            Leczenie ortodontyczne można stosować w każdym wieku - nigdy nie jest za późno
-            na piękny uśmiech!
-          </p>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>Zrotowane zęby, wady zgryzu, czy stłoczenie zębów jest powszechnym
+              powodem stosowania aparatu ortodontycznego. Umów się na konsultację ortodontyczną
+              i ustal plan leczenia! </p>
+            <p>
+              Leczenie ortodontyczne można stosować w każdym wieku - nigdy nie jest za późno
+              na piękny uśmiech!
+            </p>
+          </p-scrollPanel>
         </p-card>
-      </div>
-    </div>
-
-    <div class="row first-row">
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag1.jpg" alt="Image" width="100%"></p-image>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag2.jpg" alt="Image" width="100%"></p-image>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg" alt="Image" width="100%"></p-image>
       </div>
     </div>
 
     <div class="row second-row">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-zach.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-zach.png"
+                 class="header-icon">
             <h3>Stomatologia zachowawcza</h3>
           </ng-template>
-          <p>W naszych gabinetach wiemy jak ważne jest zdrowie zębów, dlatego podczas wizyt zawsze staramy się edukować
-            w szczególności dzieci jak wygląda higiena jamy ustnej. Dorosłym pacjentom dbającym o szczegóły możemy zagwarantować,
-            że różnorodność barw materiałów do wypełnień idealnie  dopasuje się do naturalnego koloru zęba.</p>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>
+              W naszych gabinetach wiemy jak ważne jest zdrowie zębów, dlatego podczas wizyt zawsze staramy się edukować
+              w szczególności dzieci jak wygląda higiena jamy ustnej. Dorosłym pacjentom dbającym o szczegóły możemy
+              zagwarantować,
+              że różnorodność barw materiałów do wypełnień idealnie dopasuje się do naturalnego koloru zęba
+            </p>
+          </p-scrollPanel>
         </p-card>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-chirurgia.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-chirurgia.png"
+                 class="header-icon">
             <h3>Chirurgia</h3>
           </ng-template>
-          <p>Zabiegi chirurgiczne są przeważnie związane z defektami znajdującymi
-            się w naszej jamie ustnej. Najczęściej wykonywanym zabiegiem jest oczywiście
-            ekstrakcja zęba - w rzadszych przypadkach wykonujemy także usuwanie ropni oraz
-            plastykę dziąsłową. Wszystkie z tych zabiegów wykonywane są przy znieczuleniu
-            miejscowym przez naszych specjalistów</p>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>Zabiegi chirurgiczne są przeważnie związane z defektami znajdującymi
+              się w naszej jamie ustnej. Najczęściej wykonywanym zabiegiem jest oczywiście
+              ekstrakcja zęba - w rzadszych przypadkach wykonujemy także usuwanie ropni oraz
+              plastykę dziąsłową. Wszystkie z tych zabiegów wykonywane są przy znieczuleniu
+              miejscowym przez naszych specjalistów</p>
+          </p-scrollPanel>
         </p-card>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-dziecieca.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-dziecieca.png"
+                 class="header-icon">
             <h3>Stomatologia dziecięca</h3>
           </ng-template>
-          <p>Twoje dziecko jest nazywane "trudnym pacjentem"?
-            Kojarzysz z własnego dzieciństwa wizyty u stomatologa jako traumatyczne przeżycia?
-            Odwiedź nas ze swoją pociechą. Na naszych twarzach zawsze zobaczysz uśmiech,
-            doświadczysz miłego przyjęcia i zainteresowania. Dla dzieciaków mamy super nagrody.</p>
+          <p-scrollPanel [style]="{width: '100%', height: '200px'}" styleClass="custombar1">
+            <p>Twoje dziecko jest nazywane "trudnym pacjentem"?
+              Kojarzysz z własnego dzieciństwa wizyty u stomatologa jako traumatyczne przeżycia?
+              Odwiedź nas ze swoją pociechą. Na naszych twarzach zawsze zobaczysz uśmiech,
+              doświadczysz miłego przyjęcia i zainteresowania. Dla dzieciaków mamy super nagrody.</p>
+          </p-scrollPanel>
         </p-card>
       </div>
     </div>
-
     <div class="row first-row">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg" alt="Image" width="100%"></p-image>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg" alt="Image" width="100%"></p-image>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg" alt="Image" width="100%"></p-image>
-      </div>
-    </div>
-
-    <div class="row first-row" id="last-row">
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg" alt="Image" width="100%"></p-image>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-card header=""  class="collapsible">
+        <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
-            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-estetyka.png" class="header-icon">
+            <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-estetyka.png"
+                 class="header-icon">
             <h3>Stomatologia estetyczna</h3>
           </ng-template>
           <p>Precyzyjne, bezbolesne zabiegi mogą sprawić, że Twój ząb zmieni dotychczasowy kształt,
@@ -226,47 +230,138 @@
         </p-card>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg" alt="Image" width="100%"></p-image>
       </div>
     </div>
 
-  </div>
+<!--    <div class="row first-row">-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="row first-row">-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag1.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag2.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="row first-row">-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg" alt="Image"-->
+<!--                 width="100%" ></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="row first-row" id="last-row">-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--      </div>-->
+<!--      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">-->
+<!--        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg" alt="Image"-->
+<!--                 width="100%"></p-image>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
 
   <div class="section-header">
     <h2 #team>Nasz zespół</h2>
   </div>
-  <div class="team-section">
-    <div class="team">
-      <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/mainpage_c.jpg" alt="Image" width="100%"></p-image>
-      <div class="photo-text-wrapper">
-        <p-panel header="Iwona Reguła" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
-          Lekarz dentysta - stomatologia zachowawcza, endodoncja, chirurgia, protetyka, stomatologia dziecięca
-        </p-panel>
-      </div>
-      <div class="photo-text-wrapper">
-        <p-panel header="Monika Stefańczyk" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
-          Lekarz dentysta - stomatologia zachowawcza, endodoncja, protetyka, stomatologia dziecięca
-        </p-panel>
-      </div>
-      <div class="photo-text-wrapper">
-        <p-panel header="Olga Przybylska-Kozerska" [toggleable]="true" toggler="header" [collapsed]="true"
-                 class="text-panel">
-          Lekarz dentysta - ortodoncja, leczenie dysfunkcji stawów skroniowo-żuchwowych.
-        </p-panel>
-      </div>
-      <div class="photo-text-wrapper">
-        <p-panel header="Paulina Migdałek" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
-          Higienistka stomatologiczna
-        </p-panel>
-      </div>
-      <div class="photo-text-wrapper">
-        <p-panel header="Monika Karska" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
-          Higienistka stomatologiczna
-        </p-panel>
+  <div class="cut-width" [ngStyle]="{width: windowwidth > 1000 ? '100%' : '75%'}">
+    <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/tlo3.jpg" alt="Image"
+             width="100%" id="team-banner"></p-image>
+  </div>
+
+  <div class="team-section row">
+    <div class="col ">
+      <div class="team">
+        <div class="photo-text-wrapper">
+          <p-panel header="Iwona Reguła" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
+            <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/iwona.jpg" alt="Image"
+                     width="100%"></p-image>
+            Lekarz dentysta - stomatologia zachowawcza, endodoncja, chirurgia, protetyka, stomatologia dziecięca
+          </p-panel>
+        </div>
+        <div class="photo-text-wrapper">
+          <p-panel header="Monika Karska" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
+            <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/monika2.jpg" alt="Image"
+                     width="100%"></p-image>
+            Higienistka stomatologiczna
+          </p-panel>
+        </div>
+        <div class="photo-text-wrapper">
+          <p-panel header="Monika Stefańczyk" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
+            <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/monika.jpg" alt="Image"
+                     width="100%"></p-image>
+            Lekarz dentysta - stomatologia zachowawcza, endodoncja, protetyka, stomatologia dziecięca
+          </p-panel>
+        </div>
+        <div class="photo-text-wrapper">
+          <p-panel header="Paulina Migdałek" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
+            <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/paulina.jpg" alt="Image"
+                     width="100%"></p-image>
+            Higienistka stomatologiczna
+          </p-panel>
+        </div>
+        <div class="photo-text-wrapper">
+          <p-panel header="Olga Przybylska-Kozerska" [toggleable]="true" toggler="header" [collapsed]="true"
+                   class="text-panel">
+            <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/olga.jpg" alt="Image"
+                     width="100%"></p-image>
+            Lekarz dentysta - ortodoncja, leczenie dysfunkcji stawów skroniowo-żuchwowych.
+          </p-panel>
+        </div>
       </div>
     </div>
-
   </div>
+
+  <div class="section-header">
+    <h2 #pricing>Nasz gabinet</h2>
+  </div>
+
+  <p-carousel [value]="images" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions"
+              [autoplayInterval]="4000">
+    <ng-template pTemplate="header">
+    </ng-template>
+    <ng-template let-image pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="mb-3">
+            <img src="{{image.photo_url}}" [alt]="'img'" class="product-image" />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
 
   <div class="section-header">
     <h2 #pricing>Cennik</h2>
@@ -282,10 +377,10 @@
               <th class="price-col">Cena</th>
             </tr>
           </ng-template>
-          <ng-template pTemplate="body" let-rowNode let-rowData="rowData" >
+          <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
             <tr class="highlight-on-hoover" (click)="expandNode(rowNode)">
               <td>
-                <p-treeTableToggler [rowNode]="rowNode" toggle="header" ></p-treeTableToggler>
+                <p-treeTableToggler [rowNode]="rowNode" toggle="header"></p-treeTableToggler>
                 {{rowData.service}}
               </td>
               <td>
@@ -301,7 +396,7 @@
   </div>
 </div>
 
-<p-sidebar [(visible)]="display" [position]="'bottom'" [style]="{height:'50vh'}">
+<p-sidebar [(visible)]="display" [position]="'bottom'" [style]="{height: windowwidth < 600 ? '100vh' : '50vh'}">
   <div class="row footer-row">
     <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-12 footer-section">
       <h3>Skontaktuj się z nami</h3>

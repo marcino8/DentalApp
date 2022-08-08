@@ -23,6 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {GMapModule} from "primeng/gmap";
 import {SidebarModule} from "primeng/sidebar";
+import {ScrollPanel, ScrollPanelModule} from "primeng/scrollpanel";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {SidebarModule} from "primeng/sidebar";
     TreeTableModule,
     CardModule,
     GMapModule,
-    SidebarModule
+    SidebarModule,
+    ScrollPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

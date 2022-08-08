@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, OnChanges, OnInit, ViewChild} from '@angular/core';
 import {TreeNode} from "primeng/api";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 
@@ -14,37 +14,58 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
       ])])
     ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnChanges {
   @ViewChild('menu') menuBar!: ElementRef;
   @ViewChild('eop') endOfPage!: ElementRef;
 
 
   @HostListener('window:scroll', ['$event'])
   public onViewportScroll() {
-    const bound2 = this.endOfPage.nativeElement.getBoundingClientRect();
     const bound = this.menuBar.nativeElement.getBoundingClientRect();
     this.displayMenuBar = bound.top <= 0;
-    this.display = bound2.bottom <= window.innerHeight;
   }
 
   title = 'DentistApp';
-  images: any[] = [];
-  responsiveOptions:any[] = [
+  images: any[] = [
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag1.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag2.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag7.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag8.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg"},
+  ];
+  banner_photos: any[] = [
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st1.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st2.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st3.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st4.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st5.jpg"},
+    {photo_url: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/st6.jpg"},
+  ]
+  responsiveOptions = [
     {
-      breakpoint: '1024px',
-      numVisible: 5
+      breakpoint: '1424px',
+      numVisible: 3,
+      numScroll: 3
     },
     {
-      breakpoint: '960px',
-      numVisible: 5
+      breakpoint: '1024px',
+      numVisible: 2,
+      numScroll: 2
     },
     {
       breakpoint: '768px',
-      numVisible: 5
+      numVisible: 1,
+      numScroll: 1
     },
     {
       breakpoint: '560px',
-      numVisible: 3
+      numVisible: 1,
+      numScroll: 1
     }
   ];
   pricingList: any[] = [];
@@ -54,15 +75,20 @@ export class AppComponent implements OnInit {
   value1: any;
   display: boolean = false;
   displayMenuBar: boolean = false;
+  windowwidth: number = window.screen.width;
 
   ngOnInit() {
     this.options = {
       center: {lat: 36.890257, lng: 30.707417},
       zoom: 12
     };
-    this.initImmages();
     this.initPricingList();
     this.initPricingListFull();
+  }
+
+  ngOnChanges(){
+    console.log(this.windowwidth)
+    this.windowwidth= window.screen.width;
   }
 
   initPricingList() {
@@ -102,52 +128,6 @@ export class AppComponent implements OnInit {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
-  private initImmages() {
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag1.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img1thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag2.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img2thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag10.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img3thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag3.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img5thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag4.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img6thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag5.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img7thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag6.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img8thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag7.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img9thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag8.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag9.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
-    });
-    this.images.push({
-      full_size: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/imag11.jpg",
-      thumbnail: "https://raw.githubusercontent.com/marcino8/DentalApp/master/img/img10thumb.jpg"
-    });
-  }
 
   private initPricingListFull() {
     this.pricingListTreeFull.push({
@@ -534,5 +514,10 @@ export class AppComponent implements OnInit {
   expandNode(rowNode: any) {
     rowNode.node.expanded = !rowNode.node.expanded;
     this.pricingListTreeFull = [...this.pricingListTreeFull];
+  }
+
+  openContact() {
+    this.display = true;
+    console.log(this.windowwidth)
   }
 }

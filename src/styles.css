@@ -1,8 +1,5 @@
 body, html {
-  background-color: #8D8D8D;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%238D8D8D' cx='50' cy='0' r='50'/%3E%3Cg fill='%23929292' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23989898' cx='50' cy='100' r='50'/%3E%3Cg fill='%239d9d9d' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a3a3a3' cx='50' cy='200' r='50'/%3E%3Cg fill='%23a8a8a8' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23aeaeae' cx='50' cy='300' r='50'/%3E%3Cg fill='%23b3b3b3' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b9b9b9' cx='50' cy='400' r='50'/%3E%3Cg fill='%23bfbfbf' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c4c4c4' cx='50' cy='500' r='50'/%3E%3Cg fill='%23cacaca' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23d0d0d0' cx='50' cy='600' r='50'/%3E%3Cg fill='%23d6d6d6' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23dcdcdc' cx='50' cy='700' r='50'/%3E%3Cg fill='%23e1e1e1' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23e7e7e7' cx='50' cy='800' r='50'/%3E%3Cg fill='%23ededed' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f3f3f3' cx='50' cy='900' r='50'/%3E%3Cg fill='%23f9f9f9' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23FFFFFF' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: contain;
+  background-color: antiquewhite;
   overflow-x: hidden;
 }
 
@@ -14,17 +11,11 @@ button:hover {
   color: white !important;
 }
 
-.logo-container {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
+
 
 .scroll-menu {
   padding: 10px;
-  background: #FFFFFF;
+  background: rgb(255,255,255,0.7);
   position: fixed;
   z-index: 99999;
   top: 0;
@@ -74,6 +65,11 @@ h2 {
 
 .team-section p-image{
   border-radius: 50% !important;
+  width: 75% !important;
+}
+
+#team-banner{
+  position: relative !important;
 }
 
 .collapsible-container {
@@ -86,6 +82,12 @@ p-image {
 
 #last-row {
   align-items: center;
+}
+
+.cut-width{
+  display: flex;
+  justify-items: center;
+  margin: auto;
 }
 
 p-card {
@@ -126,7 +128,13 @@ p-card {
 .logo-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.logo-container p {
+  margin: 5px;
 }
 
 .page-logo-row {
@@ -224,6 +232,8 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  z-index: 1000;
+  width: 100%
 }
 
 .photo-text-wrapper {
@@ -245,8 +255,13 @@ a {
 
 .p-card-header{
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: center !important;
+  align-items: center;
+  justify-items: center;
+}
+
+.p-card-header h3 {
+  margin-top: 10px;
 }
 
 .first-row .p-card-header {
@@ -314,9 +329,6 @@ a {
 .pricing-list-long-wrap {
   width: 800px;
   margin: 25px auto 25px auto !important;
-}
-.p-card-header {
-  justify-content: flex-start !important;
 }
 
 td {
