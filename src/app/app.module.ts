@@ -14,6 +14,15 @@ import {PanelModule} from "primeng/panel";
 import {TreeTableModule} from "primeng/treetable";
 import {CarouselModule} from "primeng/carousel";
 import {CardModule} from "primeng/card";
+import {InputTextModule} from "primeng/inputtext";
+import {ToastModule} from "primeng/toast";
+import {DialogModule} from "primeng/dialog";
+import {MultiSelectModule} from "primeng/multiselect";
+import {ContextMenuModule} from "primeng/contextmenu";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import {GMapModule} from "primeng/gmap";
+import {SidebarModule} from "primeng/sidebar";
 
 @NgModule({
   declarations: [
@@ -31,7 +40,9 @@ import {CardModule} from "primeng/card";
     PanelModule,
     CarouselModule,
     TreeTableModule,
-    CardModule
+    CardModule,
+    GMapModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

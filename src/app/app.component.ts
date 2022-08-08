@@ -1,12 +1,32 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {TreeNode} from "primeng/api";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('simpleFade', [
+      transition('*=>1', [
+        style({ opacity:0 }),
+        animate(350)
+      ])])
+    ]
 })
 export class AppComponent implements OnInit {
+  @ViewChild('menu') menuBar!: ElementRef;
+  @ViewChild('eop') endOfPage!: ElementRef;
+
+
+  @HostListener('window:scroll', ['$event'])
+  public onViewportScroll() {
+    const bound2 = this.endOfPage.nativeElement.getBoundingClientRect();
+    const bound = this.menuBar.nativeElement.getBoundingClientRect();
+    this.displayMenuBar = bound.top <= 0;
+    this.display = bound2.bottom <= window.innerHeight;
+  }
+
   title = 'DentistApp';
   images: any[] = [];
   responsiveOptions:any[] = [
@@ -30,6 +50,10 @@ export class AppComponent implements OnInit {
   pricingList: any[] = [];
   pricingListTreeFull: TreeNode[] = [];
   options: any;
+  searched: any;
+  value1: any;
+  display: boolean = false;
+  displayMenuBar: boolean = false;
 
   ngOnInit() {
     this.options = {
