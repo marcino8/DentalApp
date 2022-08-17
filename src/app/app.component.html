@@ -107,6 +107,21 @@
 
     <div class="row first-row">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst1.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst2.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst8.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+    </div>
+
+    <div class="row first-row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
         <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
             <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-endo.png"
@@ -163,6 +178,21 @@
       </div>
     </div>
 
+    <div class="row first-row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst4.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst6.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst3.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+    </div>
+
     <div class="row second-row">
       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 collapsible-container">
         <p-card header="" class="collapsible">
@@ -214,9 +244,15 @@
       </div>
     </div>
     <div class="row first-row">
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="col-xl-2 col-lg-2 d-none d-lg-block">
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+        <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/nst7.jpg" alt="Image"
+                 width="100%" class="rounded-corners"></p-image>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
         <p-card header="" class="collapsible">
           <ng-template pTemplate="header" class="header-card">
             <img alt="Card" src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/ikona-estetyka.png"
@@ -229,7 +265,7 @@
             powodem do zazdrości.</p>
         </p-card>
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+      <div class="col-xl-2 col-lg-2 d-none d-lg-block">
       </div>
     </div>
 
@@ -298,11 +334,11 @@
   </div>
   <div class="cut-width" [ngStyle]="{width: windowwidth > 1000 ? '100%' : '75%'}">
     <p-image src="https://raw.githubusercontent.com/marcino8/DentalApp/master/img/tlo3.jpg" alt="Image"
-             width="100%" id="team-banner"></p-image>
+             width="100%" id="team-banner" *ngIf="windowwidth > 1000 "></p-image>
   </div>
 
   <div class="team-section row">
-    <div class="col ">
+    <div class="col">
       <div class="team">
         <div class="photo-text-wrapper">
           <p-panel header="Iwona Reguła" [toggleable]="true" toggler="header" [collapsed]="true" class="text-panel">
@@ -395,8 +431,9 @@
   <div class="section-header" #eop>
   </div>
 </div>
+</div>
 
-<p-sidebar [(visible)]="display" [position]="'bottom'" [style]="{height: windowwidth < 600 ? '100vh' : '50vh'}">
+<p-sidebar [(visible)]="display" [position]="'bottom'" [style]="{height: windowwidth < 600 ? '100vh' : '50vh'}" id="contact-panel">
   <div class="row footer-row">
     <div class="col-xl-4 col-lg-3 col-md-3 col-sm-6 col-12 footer-section">
       <h3>Skontaktuj się z nami</h3>
