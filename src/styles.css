@@ -11,133 +11,59 @@ button:hover {
   color: white !important;
 }
 
+.fill-bg {
+  background-color: #AF2002 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='52.1' stroke-opacity='0.05' %3E%3Ccircle fill='%23AF2002' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23aa130e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23a40317' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%239e001e' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23970023' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%238f0027' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2387002b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%237e002e' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23750030' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%236c0031' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23620032' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23580032' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234e0031' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23440030' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%233b012e' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2331032b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23290328' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
 .title-page {
   z-index:2000;
 }
 
-.box {
+.ocean {
+  height: 50px; /* change the height of the waves here */
+  width: 100%;
   position: absolute;
   top: 0;
-  transform: rotate(80deg);
   left: 0;
-  z-index: 0;
+  right: 0;
+  overflow-x: hidden;
+  transform: rotate(180deg);
 }
 
 .wave {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%235b0303'/%3E%3C/svg%3E");
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: .7;
-  background-color: #4d0707 !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='52.1' stroke-opacity='0.05' %3E%3Ccircle fill='%23AF2002' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23aa130e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23a40317' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%239e001e' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23970023' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%238f0027' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2387002b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%237e002e' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23750030' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%236c0031' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23620032' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23580032' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234e0031' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23440030' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%233b012e' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2331032b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23290328' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  color: white !important;
-  width: 1000px;
-  height: 1000px;
-  margin-left: -150px;
-  margin-top: -250px;
-  transform-origin: 50% 48%;
-  border-radius: 43%;
-  animation: drift 10000ms infinite linear;
-}
-
-.wave.-three {
-  animation: drift 10000ms infinite linear;
-  position: fixed;
-  background-color: #AF2002 !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='52.1' stroke-opacity='0.05' %3E%3Ccircle fill='%23AF2002' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23aa130e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23a40317' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%239e001e' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23970023' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%238f0027' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2387002b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%237e002e' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23750030' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%236c0031' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23620032' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23580032' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234e0031' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23440030' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%233b012e' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2331032b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23290328' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  color: white !important;
-}
-
-.wave.-two {
-  animation: drift 3000ms infinite linear;
-  opacity: .1;
-  background-color: #AF2002 !important;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='52.1' stroke-opacity='0.05' %3E%3Ccircle fill='%23AF2002' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23aa130e' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23a40317' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%239e001e' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23970023' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%238f0027' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2387002b' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%237e002e' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23750030' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%236c0031' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23620032' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23580032' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%234e0031' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23440030' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%233b012e' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%2331032b' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23290328' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E") !important;
-  background-attachment: fixed !important;
-  background-size: cover !important;
-  color: white !important;
-  position: fixed;
-}
-
-.box:after {
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
+  width: 200%;
   height: 100%;
-  z-index: 11;
+  animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
+  opacity: 0.8;
 }
 
-@keyframes drift {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
+.wave:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.5;
 }
 
-
-.icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 5px;
+.wave:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s linear infinite;
+  opacity: 0.5;
 }
 
-/*Animation*/
-.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
-.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
-.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
-
-.icon img {
-  -webkit-animation: anim 2s ease infinite;
-  animation: anim 2s ease infinite;
-  -webkit-transform: scale(0,0) rotateZ(180deg);
-  transform: scale(0,0) rotateZ(180deg);
-}
-
-@-webkit-keyframes anim{
-  0% {
-    -webkit-transform: scale(0,0) rotateZ(-90deg);
-    transform: scale(0,0) rotateZ(-90deg);opacity:0
-  }
-  30% {
-    -webkit-transform: scale(1,1) rotateZ(0deg);
-    transform: scale(1,1) rotateZ(0deg);opacity:1
-  }
-  50% {
-    -webkit-transform: scale(1,1) rotateZ(0deg);
-    transform: scale(1,1) rotateZ(0deg);opacity:1
-  }
-  80% {
-    -webkit-transform: scale(0,0) rotateZ(90deg);
-    transform: scale(0,0) rotateZ(90deg);opacity:0
-  }
-}
-
-@keyframes anim{
-  0% {
-    -webkit-transform: scale(0,0) rotateZ(-90deg);
-    transform: scale(0,0) rotateZ(-90deg);opacity:0
-  }
-  30% {
-    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
-  }
-  50% {
-    -webkit-transform: scale(1,1) rotateZ(0deg);
-    transform: scale(1,1) rotateZ(0deg);opacity:1
-  }
-  80% {
-    -webkit-transform: scale(0,0) rotateZ(90deg);
-    transform: scale(0,0) rotateZ(90deg);opacity:0
-  }
+@keyframes wave {
+  0% {transform: translateX(0);}
+  50% {transform: translateX(-25%);}
+  100% {transform: translateX(-50%);}
 }
 
 .scroll-menu {
   padding: 10px;
-  background: rgb(255,255,255,0.7);
+  background: rgb(255,255,255);
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -145,6 +71,13 @@ button:hover {
   width: 100%;
 }
 
+p-carousel img {
+  margin: 10px;
+}
+
+p-carousel img {
+  margin: 10px;
+}
 
 .first-row p-image {
   max-width: 500px !important;
@@ -439,6 +372,7 @@ a {
   align-content: center;
   justify-content: center;
   align-items: center;
+  margin: 0 10px 0 10px;
 }
 
 .name-and-price {
@@ -548,4 +482,9 @@ th {
 
 #contact-panel {
   z-index: 999999;
+}
+
+.p-sidebar {
+  background: rgb(255,255,255,0.9) !important;
+
 }
